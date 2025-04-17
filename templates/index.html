@@ -4,11 +4,13 @@
 <h1>Predict your salary using AI</h1>
 
 {% if prediction %}
-<p>
+<h2>
+  Your predicted salary is:
   <span class="contact100-form-title" id="output" style="color: crimson">
-    &nbsp;{{ prediction.predicted_salary }}
+    &nbsp;${{ "%.2f"|format(prediction.predicted_salary) }}
   </span>
-</p>
+</h2>
+<p>&nbsp;</p>
 {% endif %} {% if error %}
 <span class="contact100-form-title" id="output" style="color: #ff0000">
   &nbsp;{{ error }}
