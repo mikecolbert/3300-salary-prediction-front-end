@@ -72,10 +72,12 @@ def predict():
                 # Decode the JSON response
                 prediction = response.json()
 
-                print(prediction)  # Print the decoded JSON for debugging
+                formatted_prediction = f"${prediction[0]:,.2f}"
+
+                print(formatted_prediction)  # Print the decoded JSON for debugging
 
                 # Pass the decoded JSON response to the HTML page
-                return render_template("index.html", prediction=prediction)
+                return render_template("index.html", prediction=formatted_prediction)
 
             else:
                 # Handle responses with error status codes
