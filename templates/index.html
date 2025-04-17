@@ -7,7 +7,7 @@
 <h2>
   Your predicted salary is:
   <span class="contact100-form-title" id="output" style="color: crimson">
-    &nbsp;${{ "%.2f"|format(prediction.predicted_salary) }}
+    &nbsp;${{ "{:,.2f}".format(prediction.predicted_salary) }}
   </span>
 </h2>
 <p>&nbsp;</p>
